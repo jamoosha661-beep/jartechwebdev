@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MERN Portfolio</title>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: radial-gradient(circle at top,#0f172a,#020617);
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    backdrop-filter: blur(10px);
+}
+
+nav h2{
+    background:linear-gradient(45deg,#38bdf8,#ec4899);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:80px 40px;
+}
+
+.hero-text h1{
+    font-size:48px;
+}
+
+.hero-text span{
+    background:linear-gradient(45deg,#38bdf8,#ec4899);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#94a3b8;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#3b82f6,#ec4899);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.hero img{
+    width:300px;
+    border-radius:50%;
+    box-shadow:0 0 40px #38bdf8;
+}
+
+/* SECTION */
+section{
+    padding:60px 40px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    padding:25px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #ec4899;
+}
+
+/* ICONS */
+.card i{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+/* PROJECT */
+.project img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* TESTIMONIAL */
+.testimonial-box{
+    max-width:500px;
+    margin:auto;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+}
+
+/* CONTACT */
+.contact{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:300px;
+}
+
+input,textarea{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:#020617;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>FULLSTACK WEB|Developer</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<div class="hero-text">
+<h1>Hi, I'm <span>Raimi Jamiu(JARTECHWEBDEV) </span></h1>
+<p>I'm a results-driven Full Stack WEB Developer ,I build modern full-stack web applications and also specialize in creating fast,responsive, and secure web applications that deliver real value to users and business.</p>
+<button class="btn" onclick="scrollToContact()">Hire Me</button>
+</div>
+<img src="bolaji.png/image.png">
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills & Technologies</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fab fa-css3-alt"></i>
+<p>Tailwind CSS</p>
+</div>
+
+<div class="card">
+<i class="fab fa-js"></i>
+<p>JavaScript</p>
+</div>
+
+<div class="card">
+<i class="fab fa-react"></i>
+<p>React</p>
+</div>
+
+<div class="card">
+<i class="fab fa-node-js"></i>
+<p>Node.js</p>
+</div>
+
+<div class="card">
+<i class="fas fa-database"></i>
+<p>MongoDB</p>
+</div>
+
+<div class="card">
+<i class="fab fa-html5"></i>
+<p>HTML</p>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Services</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-code"></i>
+<p>Full Stack Development</p>
+</div>
+
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<p>Frontend UI</p>
+</div>
+
+<div class="card">
+<i class="fas fa-server"></i>
+<p>Backend API</p>
+</div>
+
+<div class="card">
+<i class="fas fa-database"></i>
+<p>Database Design</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Recent Projects</h2>
+<div class="grid">
+
+<div class="card project">
+<h3>Todo App</h3>
+<p>MERN Stack App</p>
+</div>
+
+<div class="card project">
+<h3>E-commerce</h3>
+<p>Online store</p>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section>
+<h2>Testimonials</h2>
+<div class="testimonial-box" id="testimonial">
+"Excellent developer with clean code!"
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="contact">
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Raimi Jamiu</p>
+</footer>
+
+<script>
+// Scroll button
+function scrollToContact(){
+    document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+}
+
+// Testimonial slider
+const texts=[
+"Excellent developer with clean code!",
+"Very fast and reliable!",
+"Highly recommended!"
+];
+
+let i=0;
+setInterval(()=>{
+    i=(i+1)%texts.length;
+    document.getElementById("testimonial").innerText=texts[i];
+},3000);
+
+// Form
+function sendMessage(e){
+    e.preventDefault();
+    alert("Message sent!");
+}
+</script>
+
+</body>
+</html>
